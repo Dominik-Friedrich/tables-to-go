@@ -12,6 +12,7 @@ var (
 		DBTypePostgresql: true,
 		DBTypeMySQL:      true,
 		DBTypeSQLite:     true,
+		DBTypeOracle:     true,
 	}
 
 	// supportedOutputFormats represents the supported output formats
@@ -25,6 +26,7 @@ var (
 		DBTypePostgresql: "5432",
 		DBTypeMySQL:      "3306",
 		DBTypeSQLite:     "",
+		DBTypeOracle:     "1521",
 	}
 
 	// supportedNullTypes represents the supported types of NULL types

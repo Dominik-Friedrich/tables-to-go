@@ -13,6 +13,7 @@ const (
 	DBTypePostgresql DBType = "pg"
 	DBTypeMySQL      DBType = "mysql"
 	DBTypeSQLite     DBType = "sqlite3"
+	DBTypeOracle     DBType = "oracle"
 )
 
 // Set sets the datatype for the custom type for the flag package.
