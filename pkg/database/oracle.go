@@ -121,20 +121,23 @@ WHERE table_name = :name
 
 // GetColumnsOfTable executes the prepared statement to retrieve column metadata.
 func (o *Oracle) GetColumnsOfTable(table *Table) error {
-	owner := o.Settings.Schema
-	if owner == "" {
-		owner = o.Settings.User
+
+	// not recreating the prepared statement seems to cause a "ORA-01002: fetch out of sequence" error
+	// FIXME: see if theres a proper solution
+	if err := o.PrepareGetColumnsOfTableStmt(); err != nil {
+		return fmt.Errorf("failed to prepare statement: %w", err)
 	}
+	defer func() {
+		if o.GetColumnsOfTableStmt != nil {
+			o.GetColumnsOfTableStmt.Close()
+			o.GetColumnsOfTableStmt = nil
+		}
+	}()
 
 	err := o.GetColumnsOfTableStmt.Select(
 		&table.Columns,
 		table.Name,
 	)
-	if err != nil && o.Settings.Verbose {
-		fmt.Printf("> Error at GetColumnsOfTable(%v)\n", table.Name)
-		fmt.Printf("> owner: %q\n", owner)
-		fmt.Printf("> dbName: %q\n", o.DbName)
-	}
 	return err
 }
 
