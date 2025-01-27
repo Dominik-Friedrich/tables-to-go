@@ -4,8 +4,8 @@ import (
 	"strings"
 	"sync"
 
-	"github.com/fraenky8/tables-to-go/v2/pkg/database"
-	"github.com/fraenky8/tables-to-go/v2/pkg/settings"
+	"github.com/Dominik-Friedrich/tables-to-go/v2/pkg/database"
+	"github.com/Dominik-Friedrich/tables-to-go/v2/pkg/settings"
 )
 
 const (

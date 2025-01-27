@@ -6,8 +6,8 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/mock"
 
-	"github.com/fraenky8/tables-to-go/v2/pkg/database"
-	"github.com/fraenky8/tables-to-go/v2/pkg/settings"
+	"github.com/Dominik-Friedrich/tables-to-go/v2/pkg/database"
+	"github.com/Dominik-Friedrich/tables-to-go/v2/pkg/settings"
 )
 
 type mockDB struct {

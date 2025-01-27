@@ -3,7 +3,6 @@ module github.com/Dominik-Friedrich/tables-to-go/v2
 go 1.23
 
 require (
-	github.com/fraenky8/tables-to-go/v2 v2.10.1
 	github.com/go-sql-driver/mysql v1.8.1
 	github.com/godror/godror v0.46.0
 	github.com/iancoleman/strcase v0.3.0

@@ -5,7 +5,7 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/fraenky8/tables-to-go/v2/pkg/settings"
+	"github.com/Dominik-Friedrich/tables-to-go/v2/pkg/settings"
 	_ "github.com/godror/godror"
 	go_ora "github.com/sijms/go-ora/v2"
 )

@@ -1,7 +1,7 @@
 package tagger
 
 import (
-	"github.com/fraenky8/tables-to-go/v2/pkg/database"
+	"github.com/Dominik-Friedrich/tables-to-go/v2/pkg/database"
 )
 
 // Mastermind represents the Masterminds/structable "stbl"-tag.
