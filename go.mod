@@ -1,4 +1,4 @@
-module github.com/fraenky8/tables-to-go/v2
+module github.com/Dominik-Friedrich/tables-to-go/v2
 
 go 1.23
 
