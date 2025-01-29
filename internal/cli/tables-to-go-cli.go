@@ -176,6 +176,17 @@ func createTableStructString(settings *settings.Settings, db database.Database, 
 	fileContent.WriteString(structFields.String())
 	fileContent.WriteString("}")
 
+	// write TableName method
+	fileContent.WriteString("\n\nfunc (")
+	fileContent.WriteString(strings.ToLower(string(tableName[0])))
+	fileContent.WriteString(" ")
+	fileContent.WriteString(tableName)
+	fileContent.WriteString(") TableName() string {\n")
+	fileContent.WriteString("\treturn \"")
+	fileContent.WriteString(table.Name)
+	fileContent.WriteString("\"\n")
+	fileContent.WriteString("}\n")
+
 	return tableName, fileContent.String(), nil
 }
 
